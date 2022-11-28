@@ -28,8 +28,7 @@ function initMap() {
     });
     //теперь обьявляем маркер(но пока что без позиции)
     marker = new google.maps.Marker({
-        map: map,
-        position: uluru,
+        map: null,
         draggable: true
     });
     //Listener для того чтобы когда двигался маркер менялись координаты в поле ввода

@@ -26,7 +26,7 @@ session_start();
 </nav>
 
 <br><br><br><br><br>
-<div class="container">
+<form class="container">
     <div class="card">
         <div class="card-header"><?php echo $_SESSION['conf_ref']->getTitle(); ?></div>
         <form action="../commands/refactor_record.php" method="post">
@@ -73,10 +73,11 @@ session_start();
                 <a href="../index.php" type="button" class="btn btn-primary">Back</a>
                 <button type="submit" id="save" class="btn btn-success">Save</button>
         </form>
-
-                <button type="button" class="btn btn-danger">Delete</button>
+        <form style="display: inline-block" action="../commands/Delete_record.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $_SESSION['conf_ref']->getId(); ?>">
+                <button type="submit" class="btn btn-danger">Delete</button>
             </div>
-
+        </form>
     </div>
 </div>
 <script>
