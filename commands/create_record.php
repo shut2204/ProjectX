@@ -13,5 +13,5 @@
     }else{
         $conf_dao->createRecord($title, $date, $country, $latitude, $longitude);
     }
-    header('Location: ../index.php');
-    exit;
+    //header('Location: ../index.php');
+    //exit;
