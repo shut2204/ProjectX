@@ -1,0 +1,31 @@
+.btn-outline-purple {
+    color: white;
+    border-color: mediumpurple;
+}
+
+.btn-outline-purple:hover {
+    color: white;
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+}
+
+.btn-outline-purple:focus, .btn-outline-purple.focus {
+    box-shadow: mediumpurple;
+}
+
+.btn-outline-purple.disabled, .btn-outline-purple:disabled {
+    color: white;
+    background-color: transparent;
+}
+
+.btn-outline-purple:not(:disabled):not(.disabled):active, .btn-outline-purple:not(:disabled):not(.disabled).active,
+.show > .btn-outline-purple.dropdown-toggle {
+    color: white;
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+}
+
+.btn-outline-purple:not(:disabled):not(.disabled):active:focus, .btn-outline-purple:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-purple.dropdown-toggle:focus {
+    box-shadow: mediumpurple;
+}

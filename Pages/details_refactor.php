@@ -28,7 +28,12 @@ session_start();
 <br><br><br><br><br>
 <div class="container">
     <form class="card">
-        <div class="card-header"><?php echo $_SESSION['conf_ref']->getTitle(); ?></div>
+        <div class="card-header"><?php echo $_SESSION['conf_ref']->getTitle(); ?>   <?php
+                                                                                        if (isset($_SESSION['ERROR_REF'])){
+                                                                                            echo '<SPAN style="background: red"> &nbsp;&nbsp;&nbsp;&nbsp;' . $_SESSION['ERROR_REF'] . ' </SPAN>';
+                                                                                        }
+                                                                                    ?>
+        </div>
         <form action="../commands/refactor_record.php" method="post">
             <div class="card-body">
                 <input type="hidden" name="id" value="<?php echo $_SESSION['conf_ref']->getId(); ?>">
@@ -41,6 +46,7 @@ session_start();
                 <label for="airdatepicker">Date:</label>
                 <input type="text" name="date" id="airdatepicker" class="form-control-sm"
                        required
+                       pattern="\d{4}-\d\d-\d\d \d\d:\d\d" title="Please input like 2022-11-30 15:00"
                        value="<?php echo $_SESSION['conf_ref']->getDates(); ?>"
                 >
                 <br>
@@ -71,7 +77,7 @@ session_start();
             </div>
             <div class="card-footer">
                 <a href="../index.php" type="button" class="btn btn-primary">Back</a>
-                <button type="submit" id="save" class="btn btn-success">Save</button>
+                <button type="submit" id="save" class="btn btn-warning">Save</button>
             </div>
         </form>
         <div class="card-header" style="background-color:#fff;">

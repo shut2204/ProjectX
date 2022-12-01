@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +25,12 @@
     <a class="navbar-brand" href="../index.php">ProjectX</a>
 </nav>
 
+
 <br><br><br><br><br>
 <div class="container">
     <div class="card">
-        <div class="card-header">Create conversation</div>
+        <div class="card-header">Create conversation
+        </div>
         <form action="../commands/create_record.php" method="post">
             <div class="card-body">
                 <span>*Name</span>
@@ -31,7 +38,8 @@
                 pattern=".{2,255}" title="Please input text of range from 2 to 255">
 
                 <label for="airdatepicker">*Date:</label>
-                <input type="text" name="date" id="airdatepicker" class="form-control-sm" required>
+                <input type="text" name="date" id="airdatepicker" class="form-control-sm" required
+                       pattern="\d{4}-\d\d-\d\d \d\d:\d\d" title="Please input like 2022-11-30 15:00">
                 <br>
                 <label for="sel1">*Country:</label>
                 <select name="country" class="form-control" id="sel1" required>

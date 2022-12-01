@@ -12,6 +12,7 @@
   <title>ProjectX</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -20,13 +21,13 @@
 <body background="imgs/1.jfif">
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.php">ProjectX</a>
+    <a class="navbar-brand" style="color: #45bced" href="index.php">ProjectX</a>
 </nav>
 
 <br><br><br><br><br>
 
 <div class="container">
-    <a  href="Pages/create.html" class="mb-2 btn btn-outline-success">Add</a>
+    <a href="Pages/create.php" style="color: mediumpurple" class="mb-2 btn btn-outline-purple">Add</a>
     <table class="table table-dark table-hover">
         <thead>
         <tr>
@@ -44,12 +45,12 @@
             <td>
                 <form style="display: inline-block"action="commands/details_record.php" method="get">
                     <input type="hidden" name="id" value="<?php echo $value->getId();?>">
-                    <button name="detail" type="submit" class="btn btn-outline-success">Details</button>
+                    <button name="detail" type="submit" class="btn btn-outline-warning">Details</button>
                 </form>
                 <form style="display: inline-block" action="commands/refactor_record.php" method="get">
                     <input type="hidden" name="id_ref" value="<?php echo $value->getId();?>">
                     <input type="hidden" name="command" value="site">
-                    <button name="edit" type="submit" class="btn btn-outline-info">Edit</button>
+                    <button name="edit" type="submit" class="btn btn-outline-success">Edit</button>
                 </form>
             </td>
 
