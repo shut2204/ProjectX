@@ -48,9 +48,9 @@ session_start();
                 <label for="sel1">Country:</label>
                 <select name="country" class="form-control" id="sel1" required>
                     <option value="1">Ukraine</option>
-                    <option value="2">USA</option>
-                    <option value="3">Canada</option>
-                    <option value="4">Philippines</option>
+                    <option value="11">USA</option>
+                    <option value="21">Canada</option>
+                    <option value="31">Philippines</option>
                 </select>
                 <p class="mb-0">Address :</p>
                 <span>Latitude</span>
