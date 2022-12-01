@@ -39,7 +39,7 @@
 
                 <label for="airdatepicker">*Date:</label>
                 <input type="text" name="date" id="airdatepicker" class="form-control-sm" required
-                       pattern="\d{4}-\d\d-\d\d \d\d:\d\d" title="Please input like 2022-11-30 15:00">
+                       pattern="\d{4}-\d\d-\d\d \d\d:\d\d(:\d\d)?" title="Please input like 2022-11-30 15:00">
                 <br>
                 <label for="sel1">*Country:</label>
                 <select name="country" class="form-control" id="sel1" required>

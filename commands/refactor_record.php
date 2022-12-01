@@ -22,17 +22,6 @@
         $latitude = $_POST['latitude'];
         $longitude = $_POST['longitude'];
 
-        if (!\service\Validate::validateName($title) || !\service\Validate::validateDate($date)
-            || !\service\Validate::validateDouble($latitude,$longitude)){
-
-            $_SESSION['ERROR_REF'] = 'Incorrect data, please enter correct values';
-            header('Location: ../Pages/details_refactor.php');
-            exit();
-
-        }else{
-            unset($_SESSION['ERROR_REF']);
-        }
-
         $conf_dao = new \Database\ConferenceDAO();
 
         if ($latitude == null || $longitude == null) {
